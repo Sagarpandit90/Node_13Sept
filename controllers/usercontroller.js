@@ -12,11 +12,13 @@ function getUser(req,res){
     try {
         let id = parseInt(re.params.id);
         let user = users.find((user)=> user.id == id);
+        res.json(user);
     } catch (err) {
         
     }
 }
 
 module.exports = {
-    getAllUser
+    getAllUser,
+    getUser
 }
